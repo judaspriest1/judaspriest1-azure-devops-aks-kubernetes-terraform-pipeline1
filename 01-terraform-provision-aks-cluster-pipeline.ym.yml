@@ -20,8 +20,7 @@ stages:
           inputs:
             targetPath: '$(System.DefaultWorkingDirectory)/terraform-manifests'
             artifact: 'terraform-manifests-out'
-            publishLocation: 'pipeline' 
-            
+            publishLocation: 'pipeline'     
         - task: TerraformInstaller@0
           displayName: Terraform Install
           inputs:
@@ -44,3 +43,5 @@ stages:
             command: 'validate'
             workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-manifests'
             allowTelemetryCollection: false
+
+
